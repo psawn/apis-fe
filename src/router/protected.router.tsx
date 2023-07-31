@@ -25,12 +25,11 @@ const ProtectedRoute = (props: any) => {
     <React.Fragment>
       {isLoggedIn
         ? props.children
-        : // : notification.open({
-          //     type: "error",
-          //     message: "Error",
-          //     description: "Please login",
-          //   })}
-          null}
+        : notification.open({
+            type: "error",
+            message: "Error",
+            description: "Please login",
+          })}
     </React.Fragment>
   );
 };
